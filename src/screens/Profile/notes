@@ -1,0 +1,159 @@
+import React, {useEffect, useState} from 'react';
+import {
+  View,
+  Text,
+  FlatList,
+  Dimensions,
+  ScrollView,
+  SafeAreaView,
+  TouchableOpacity,
+  ImageBackground,
+} from 'react-native';
+import Post from '../../components/Post';
+import {API, graphqlOperation} from 'aws-amplify';
+import {createUser} from '../../graphql/mutations';
+import styles from './styles';
+import {FAB} from 'react-native-elements';
+import Entypo from 'react-native-vector-icons/Entypo';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+
+import posts from '../../../data/posts';
+import {listPosts} from '../../graphql/queries';
+import {Image} from 'react-native-elements';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import {red} from 'react-native-reanimated/src/reanimated2/Colors';
+
+const Profile = () => {
+  return (
+    <SafeAreaView style={styles.container}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={styles.titleBar}>
+          <Entypo name="ios-arrow-back" size={24} color="#52575D" />
+          <Entypo name="md-more" size={24} color="#52575D" />
+        </View>
+
+        <View style={{alignSelf: 'center'}}>
+          <View style={styles.profileImage}>
+            <Image
+              source={{
+                          uri: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTApJdGN6I8NjFvhKfOBIwjz759q53b8HBckMLXl_blfq5RXZFy',
+                        }}
+              style={styles.image}
+              resizeMode="center"
+            />
+          </View>
+          <View style={styles.dm}>
+            <MaterialIcons name="chat" size={18} color="#DFD8C8" />
+          </View>
+          <View style={styles.active} />
+          <View style={styles.add}>
+            <Entypo
+              name="ios-add"
+              size={48}
+              color="#DFD8C8"
+              style={{marginTop: 6, marginLeft: 2}}
+            />
+          </View>
+        </View>
+
+        <View style={styles.infoContainer}>
+          <Text style={[styles.text, {fontWeight: '200', fontSize: 36}]}>
+            Julie
+          </Text>
+          <Text style={[styles.text, {color: '#AEB5BC', fontSize: 14}]}>
+            Photographer
+          </Text>
+        </View>
+
+        <View style={styles.statsContainer}>
+          <View style={styles.statsBox}>
+            <Text style={[styles.text, {fontSize: 24}]}>483</Text>
+            <Text style={[styles.text, styles.subText]}>Posts</Text>
+          </View>
+          <View
+            style={[
+              styles.statsBox,
+              {borderColor: '#DFD8C8', borderLeftWidth: 1, borderRightWidth: 1},
+            ]}>
+            <Text style={[styles.text, {fontSize: 24}]}>45,844</Text>
+            <Text style={[styles.text, styles.subText]}>Followers</Text>
+          </View>
+          <View style={styles.statsBox}>
+            <Text style={[styles.text, {fontSize: 24}]}>302</Text>
+            <Text style={[styles.text, styles.subText]}>Following</Text>
+          </View>
+        </View>
+
+        <View style={{marginTop: 32}}>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <View style={styles.mediaImageContainer}>
+              <Image
+                source={require('./assets/media1.jpg')}
+                style={styles.image}
+                resizeMode="cover"
+              />
+            </View>
+            <View style={styles.mediaImageContainer}>
+              <Image
+                source={require('./assets/media2.jpg')}
+                style={styles.image}
+                resizeMode="cover"
+              />
+            </View>
+            <View style={styles.mediaImageContainer}>
+              <Image
+                source={require('./assets/media3.jpg')}
+                style={styles.image}
+                resizeMode="cover"
+              />
+            </View>
+          </ScrollView>
+          <View style={styles.mediaCount}>
+            <Text
+              style={[
+                styles.text,
+                {fontSize: 24, color: '#DFD8C8', fontWeight: '300'},
+              ]}>
+              70
+            </Text>
+            <Text
+              style={[
+                styles.text,
+                {fontSize: 12, color: '#DFD8C8', textTransform: 'uppercase'},
+              ]}>
+              Media
+            </Text>
+          </View>
+        </View>
+        <Text style={[styles.subText, styles.recent]}>Recent Activity</Text>
+        <View style={{alignItems: 'center'}}>
+          <View style={styles.recentItem}>
+            <View style={styles.activityIndicator} />
+            <View style={{width: 250}}>
+              <Text
+                style={[styles.text, {color: '#41444B', fontWeight: '300'}]}>
+                Started following{' '}
+                <Text style={{fontWeight: '400'}}>Jake Challeahe</Text> and{' '}
+                <Text style={{fontWeight: '400'}}>Luis Poteer</Text>
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.recentItem}>
+            <View style={styles.activityIndicator} />
+            <View style={{width: 250}}>
+              <Text
+                style={[styles.text, {color: '#41444B', fontWeight: '300'}]}>
+                Started following{' '}
+                <Text style={{fontWeight: '400'}}>Luke Harper</Text>
+              </Text>
+            </View>
+          </View>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
+};
+
+export default Profile;
