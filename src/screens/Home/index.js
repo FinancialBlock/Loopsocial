@@ -1,14 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text, FlatList, Dimensions} from 'react-native';
-
+import Post from "../../components/Post";
 
 const Home = () => {
-    return(
-      <View>
-          <Text> hey </Text>
-      </View>
+  return (
+    <View>
+      <Post />
+    </View>
   );
-
 };
 
 export default Home;
