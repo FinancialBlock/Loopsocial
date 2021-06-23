@@ -1,18 +1,16 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '../screens/Home';
-import Profile from '../screens/Profile';
 import {Text} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {TabActions} from '@react-navigation/native';
-import Camera from '../screens/Camera';
-import Search from '../screens/Search';
-import Profilea from '../screens/profile2';
-import Inbox from '../screens/Inbox';
+import Profilea from "../screens/profile2";
+import SearchBar from "../screens/Search";
+import TabViewExample from "../screens/Inbox";
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator()
+
 
 const HomeButtonTabNavigator = () => {
   return (
@@ -34,7 +32,7 @@ const HomeButtonTabNavigator = () => {
       />
       <Tab.Screen
         name={'Search'}
-        component={Search}
+        component={SearchBar}
         options={{
           tabBarIcon: ({color}) => (
             <EvilIcons name={'search'} size={40} color={color} />
@@ -42,8 +40,8 @@ const HomeButtonTabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name={'Upload'}
-        component={Camera}
+        name={'Camera'}
+        component={Home}
         options={{
           tabBarIcon: ({color}) => (
             <Entypo name={'video-camera'} size={35} color={color} />
@@ -53,7 +51,7 @@ const HomeButtonTabNavigator = () => {
       />
       <Tab.Screen
         name={'Inbox'}
-        component={Inbox}
+        component={TabViewExample}
         options={{
           tabBarIcon: ({color}) => (
             <Entypo name={'inbox'} size={30} color={color} />

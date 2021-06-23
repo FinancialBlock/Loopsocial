@@ -1,8 +1,8 @@
 import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import type {Node} from 'react';
-import AntDesign from "react-native-vector-icons/AntDesign";
+import AntDesign from 'react-native-vector-icons/AntDesign';
 import {
   SafeAreaView,
   ScrollView,
@@ -20,18 +20,15 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Home from "./src/screens/Home";
+import Home from './src/screens/Home';
+import Navigation from './src/navigation';
 
 const App: () => Node = () => {
   return (
-    <SafeAreaView>
-      <NavigationContainer>
-     <Home/>
-      </NavigationContainer>
+    <SafeAreaView style={{flex: 1, backgroundColor: 'black'}}>
+      <Navigation />
     </SafeAreaView>
   );
 };
-
-
 
 export default App;

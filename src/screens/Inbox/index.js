@@ -16,7 +16,6 @@ import {
 } from 'react-native';
 import TopBar from './TopBar';
 import Home from '../Home';
-import App from '../../components/Messages';
 
 const FirstRoute = () => (
   <View>
