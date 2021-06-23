@@ -24,13 +24,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginRight: 6,
   },
-  bottomcontainer: {
+  bottomContainer: {
     padding: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
   },
-
   handle: {
     color: '#fff',
     fontSize: 16,
@@ -50,7 +49,7 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
   songName: {
-    color: '#fff',
+    color: 'red',
     fontSize: 18,
     marginLeft: 5,
   },
@@ -77,11 +76,10 @@ const styles = StyleSheet.create({
     marginTop: 4,
     fontWeight: '500',
   },
-  container: {
-    width: '100%',
-    height: '50',
-    backgroundColor: 'white',
-    borderRadius: 8,
+    container: {
+      width: '100%',
+      height: Dimensions.get('window').height - 60,
+
   },
   searchInput: {
     width: '100%',
