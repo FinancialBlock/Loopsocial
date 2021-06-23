@@ -6,10 +6,11 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Profilea from '../screens/profile2';
-import SearchBar from '../screens/Search';
+import Search from '../screens/Search';
 import TabViewExample from '../screens/Inbox';
 import {Image} from 'react-native';
 import circleicon from '../assets/images/circle-cropped.png';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -33,26 +34,22 @@ const HomeButtonTabNavigator = () => {
       />
       <Tab.Screen
         name={'Search'}
-        component={SearchBar}
+        component={Search}
         options={{
           tabBarIcon: ({color}) => (
             <EvilIcons name={'search'} size={40} color={color} />
           ),
         }}
       />
-      <Tab.Screen
-        name={'Camera'}
-        component={Home}
-        options={{
-          tabBarIcon: ({}) => (
-            <Image
-              source={circleicon}
-              style={{height: 50, resizeMode: 'contain'}}
-            />
-          ),
-          tabBarLabel: () => null,
-        }}
-      />
+        <Tab.Screen
+            name={'Camera'}
+            component={Search}
+            options={{
+                tabBarIcon: ({color}) => (
+                    <EvilIcons name={'camera'} size={40} color={color} />
+                ),
+            }}
+        />
       <Tab.Screen
         name={'Inbox'}
         component={TabViewExample}
