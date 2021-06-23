@@ -1,11 +1,5 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import type {Node} from 'react';
 import AntDesign from "react-native-vector-icons/AntDesign";
@@ -31,7 +25,9 @@ import Home from "./src/screens/Home";
 const App: () => Node = () => {
   return (
     <SafeAreaView>
+      <NavigationContainer>
      <Home/>
+      </NavigationContainer>
     </SafeAreaView>
   );
 };
