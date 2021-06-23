@@ -5,12 +5,13 @@ import {Text} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Profilea from "../screens/profile2";
-import SearchBar from "../screens/Search";
-import TabViewExample from "../screens/Inbox";
+import Profilea from '../screens/profile2';
+import SearchBar from '../screens/Search';
+import TabViewExample from '../screens/Inbox';
+import {Image} from 'react-native';
+import circleicon from '../assets/images/circle-cropped.png';
 
-const Tab = createBottomTabNavigator()
-
+const Tab = createBottomTabNavigator();
 
 const HomeButtonTabNavigator = () => {
   return (
@@ -43,8 +44,11 @@ const HomeButtonTabNavigator = () => {
         name={'Camera'}
         component={Home}
         options={{
-          tabBarIcon: ({color}) => (
-            <Entypo name={'video-camera'} size={35} color={color} />
+          tabBarIcon: ({}) => (
+            <Image
+              source={circleicon}
+              style={{height: 50, resizeMode: 'contain'}}
+            />
           ),
           tabBarLabel: () => null,
         }}

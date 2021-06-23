@@ -4,7 +4,7 @@ import Video from 'react-native-video';
 const styles = StyleSheet.create({
   containervideo: {
     width: '100%',
-    height: Dimensions.get('window').height - 80,
+    height: Dimensions.get('window').height - 50,
   },
 
   backgroundVideo: {
