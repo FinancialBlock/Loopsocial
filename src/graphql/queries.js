@@ -17,11 +17,13 @@ export const getUser = /* GraphQL */ `
           songID
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -42,6 +44,7 @@ export const listUsers = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }
@@ -64,6 +67,7 @@ export const getPost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       songID
       song {
@@ -72,9 +76,11 @@ export const getPost = /* GraphQL */ `
         imageUri
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -97,6 +103,7 @@ export const listPosts = /* GraphQL */ `
           imageUri
           createdAt
           updatedAt
+          owner
         }
         songID
         song {
@@ -105,9 +112,11 @@ export const listPosts = /* GraphQL */ `
           imageUri
           createdAt
           updatedAt
+          owner
         }
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }
@@ -121,6 +130,7 @@ export const getSong = /* GraphQL */ `
       imageUri
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -137,6 +147,7 @@ export const listSongs = /* GraphQL */ `
         imageUri
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }

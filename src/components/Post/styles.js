@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
   songName: {
-    color: 'red',
+    color: 'white',
     fontSize: 18,
     marginLeft: 5,
   },

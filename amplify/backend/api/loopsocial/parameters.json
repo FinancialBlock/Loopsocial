@@ -1,5 +1,11 @@
 {
   "AppSyncApiName": "loopsocial",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authloopsocial29b2f9f6",
+      "Outputs.UserPoolId"
+    ]
+  }
 }

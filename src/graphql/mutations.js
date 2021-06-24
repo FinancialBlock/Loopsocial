@@ -20,11 +20,13 @@ export const createUser = /* GraphQL */ `
           songID
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -47,11 +49,13 @@ export const updateUser = /* GraphQL */ `
           songID
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -74,11 +78,13 @@ export const deleteUser = /* GraphQL */ `
           songID
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -102,6 +108,7 @@ export const createPost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       songID
       song {
@@ -110,9 +117,11 @@ export const createPost = /* GraphQL */ `
         imageUri
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -136,6 +145,7 @@ export const updatePost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       songID
       song {
@@ -144,9 +154,11 @@ export const updatePost = /* GraphQL */ `
         imageUri
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -170,6 +182,7 @@ export const deletePost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       songID
       song {
@@ -178,9 +191,11 @@ export const deletePost = /* GraphQL */ `
         imageUri
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -195,6 +210,7 @@ export const createSong = /* GraphQL */ `
       imageUri
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -209,6 +225,7 @@ export const updateSong = /* GraphQL */ `
       imageUri
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -223,6 +240,7 @@ export const deleteSong = /* GraphQL */ `
       imageUri
       createdAt
       updatedAt
+      owner
     }
   }
 `;

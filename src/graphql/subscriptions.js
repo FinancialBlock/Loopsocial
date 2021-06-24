@@ -2,8 +2,8 @@
 // this is an auto generated file. This will be overwritten
 
 export const onCreateUser = /* GraphQL */ `
-  subscription OnCreateUser {
-    onCreateUser {
+  subscription OnCreateUser($owner: String!) {
+    onCreateUser(owner: $owner) {
       id
       username
       email
@@ -17,17 +17,19 @@ export const onCreateUser = /* GraphQL */ `
           songID
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onUpdateUser = /* GraphQL */ `
-  subscription OnUpdateUser {
-    onUpdateUser {
+  subscription OnUpdateUser($owner: String!) {
+    onUpdateUser(owner: $owner) {
       id
       username
       email
@@ -41,17 +43,19 @@ export const onUpdateUser = /* GraphQL */ `
           songID
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onDeleteUser = /* GraphQL */ `
-  subscription OnDeleteUser {
-    onDeleteUser {
+  subscription OnDeleteUser($owner: String!) {
+    onDeleteUser(owner: $owner) {
       id
       username
       email
@@ -65,17 +69,19 @@ export const onDeleteUser = /* GraphQL */ `
           songID
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onCreatePost = /* GraphQL */ `
-  subscription OnCreatePost {
-    onCreatePost {
+  subscription OnCreatePost($owner: String!) {
+    onCreatePost(owner: $owner) {
       id
       videoUri
       description
@@ -90,6 +96,7 @@ export const onCreatePost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       songID
       song {
@@ -98,15 +105,17 @@ export const onCreatePost = /* GraphQL */ `
         imageUri
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onUpdatePost = /* GraphQL */ `
-  subscription OnUpdatePost {
-    onUpdatePost {
+  subscription OnUpdatePost($owner: String!) {
+    onUpdatePost(owner: $owner) {
       id
       videoUri
       description
@@ -121,6 +130,7 @@ export const onUpdatePost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       songID
       song {
@@ -129,15 +139,17 @@ export const onUpdatePost = /* GraphQL */ `
         imageUri
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onDeletePost = /* GraphQL */ `
-  subscription OnDeletePost {
-    onDeletePost {
+  subscription OnDeletePost($owner: String!) {
+    onDeletePost(owner: $owner) {
       id
       videoUri
       description
@@ -152,6 +164,7 @@ export const onDeletePost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       songID
       song {
@@ -160,42 +173,47 @@ export const onDeletePost = /* GraphQL */ `
         imageUri
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onCreateSong = /* GraphQL */ `
-  subscription OnCreateSong {
-    onCreateSong {
+  subscription OnCreateSong($owner: String!) {
+    onCreateSong(owner: $owner) {
       id
       name
       imageUri
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onUpdateSong = /* GraphQL */ `
-  subscription OnUpdateSong {
-    onUpdateSong {
+  subscription OnUpdateSong($owner: String!) {
+    onUpdateSong(owner: $owner) {
       id
       name
       imageUri
       createdAt
       updatedAt
+      owner
     }
   }
 `;
 export const onDeleteSong = /* GraphQL */ `
-  subscription OnDeleteSong {
-    onDeleteSong {
+  subscription OnDeleteSong($owner: String!) {
+    onDeleteSong(owner: $owner) {
       id
       name
       imageUri
       createdAt
       updatedAt
+      owner
     }
   }
 `;
