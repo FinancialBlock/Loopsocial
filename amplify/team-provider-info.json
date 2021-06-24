@@ -36,6 +36,11 @@
       "StackName": "amplify-loopsocial-loopenv-162256",
       "StackId": "arn:aws:cloudformation:us-east-2:761722907844:stack/amplify-loopsocial-loopenv-162256/2f2c5060-d469-11eb-91f4-069665e4e654",
       "AmplifyAppId": "d3hlvdgnz46h4x"
+    },
+    "categories": {
+      "auth": {
+        "loopsocial29b2f9f6": {}
+      }
     }
   }
 }

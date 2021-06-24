@@ -1,4 +1,5 @@
 import 'react-native-gesture-handler';
+import { withAuthenticator } from 'aws-amplify-react-native'
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import type {Node} from 'react';
@@ -31,4 +32,4 @@ const App: () => Node = () => {
   );
 };
 
-export default App;
+export default withAuthenticator(App);
