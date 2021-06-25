@@ -1,4 +1,4 @@
-type User @model @auth(rules: [{ allow: owner }]) {
+type User @model {
   id: ID!
   username: String!
   email: String!
@@ -6,7 +6,7 @@ type User @model @auth(rules: [{ allow: owner }]) {
   posts: [Post] @connection(keyName: "byUser", fields: ["id"])
 }
 
-type Post @model @key(name: "byUser", fields: ["userID"]) @auth(rules: [{ allow: owner, ownerField: "owner", operations: [create, update, delete, read] }])  {
+type Post @model @key(name: "byUser", fields: ["userID"]) {
   id: ID!
   videoUri: String!
   description: String!
@@ -18,7 +18,7 @@ type Post @model @key(name: "byUser", fields: ["userID"]) @auth(rules: [{ allow:
   song: Song @connection(fields: ["songID"])
 }
 
-type Song @model @auth(rules: [{ allow: owner }]) {
+type Song @model {
   id: ID!
   name: String!
   imageUri: String
