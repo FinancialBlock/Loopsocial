@@ -8,6 +8,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Profilea from '../screens/profile2';
 import Search from '../screens/Search';
 import TabViewExample from '../screens/Inbox';
+import Camera from "../screens/Camera";
 import {Image} from 'react-native';
 import circleicon from '../assets/images/circle-cropped.png';
 
@@ -43,7 +44,7 @@ const HomeButtonTabNavigator = () => {
       />
         <Tab.Screen
             name={'Camera'}
-            component={Search}
+            component={Camera}
             options={{
                 tabBarIcon: ({color}) => (
                     <EvilIcons name={'camera'} size={40} color={color} />
