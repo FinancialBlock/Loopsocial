@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import Inbox from '../Inbox';
 import {
   View,
   Text,
@@ -6,6 +7,7 @@ import {
   Dimensions,
   ScrollView,
   Image,
+  Button,
   StyleSheet,
   SafeAreaView,
   TouchableOpacity,
@@ -18,8 +20,10 @@ import {FAB} from 'react-native-elements';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import Feed from '../.././components/Feed';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+import Home from '../Home';
 
 import posts from '../../../data/posts';
 import {listPosts} from '../../graphql/queries';
@@ -68,6 +72,12 @@ const Profilea = () => {
           </Text>
         </View>
 
+        <View style={styles.userBtnWrapper}>
+          <TouchableOpacity style={styles.userBtn} onPress={() => {}}>
+            <Text style={styles.userBtnTxt}>Subscribe</Text>
+          </TouchableOpacity>
+        </View>
+
         <View style={styles.statsContainer}>
           <View style={styles.statsBox}>
             <Text style={[styles.text, {fontSize: 24}]}>483</Text>
@@ -97,78 +107,16 @@ const Profilea = () => {
                 style={styles.iconloop}
                 name={'infinity'}
               />
-            </View>
-          </View>
-        </View>
 
-        <View style={{marginTop: 32}}>
-          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-            <View style={styles.mediaImageContainer}>
-              <Image
-                source={require('./assets/media1.jpg')}
-                style={styles.image}
-                resizeMode="cover"
-              />
-            </View>
-            <View style={styles.mediaImageContainer}>
-              <Image
-                source={require('./assets/media2.jpg')}
-                style={styles.image}
-                resizeMode="cover"
-              />
-            </View>
-            <View style={styles.mediaImageContainer}>
-              <Image
-                source={require('./assets/media3.jpg')}
-                style={styles.image}
-                resizeMode="cover"
-              />
-            </View>
-          </ScrollView>
-          <View style={styles.mediaCount}>
-            <Text
-              style={[
-                styles.text,
-                {fontSize: 24, color: '#DFD8C8', fontWeight: '300'},
-              ]}>
-              70
-            </Text>
-            <Text
-              style={[
-                styles.text,
-                {fontSize: 12, color: '#DFD8C8', textTransform: 'uppercase'},
-              ]}>
-              Media
-            </Text>
-          </View>
-        </View>
-        <Text style={[styles.subText, styles.recent]}>Recent Activity</Text>
-        <View style={{alignItems: 'center'}}>
-          <View style={styles.recentItem}>
-            <View style={styles.activityIndicator} />
-            <View style={{width: 250}}>
-              <Text
-                style={[styles.text, {color: '#41444B', fontWeight: '300'}]}>
-                Started following{' '}
-                <Text style={{fontWeight: '400'}}>Jake Challeahe</Text> and{' '}
-                <Text style={{fontWeight: '400'}}>Luis Poteer</Text>
-              </Text>
-            </View>
-          </View>
 
-          <View style={styles.recentItem}>
-            <View style={styles.activityIndicator} />
-            <View style={{width: 250}}>
-              <Text
-                style={[styles.text, {color: '#41444B', fontWeight: '300'}]}>
-                Started following{' '}
-                <Text style={{fontWeight: '400'}}>Luke Harper</Text>
-              </Text>
+
             </View>
           </View>
         </View>
+        <Feed/>
       </ScrollView>
     </SafeAreaView>
+
   );
 };
 
@@ -293,6 +241,24 @@ const styles = StyleSheet.create({
   iconloop: {
     flexDirection: 'row',
   },
+  userBtnWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    width: '100%',
+    marginBottom: 2,
+    marginTop: 10,
+},
+  userBtn: {
+    borderColor: '#2e64e5',
+    borderWidth: 2,
+    borderRadius: 3,
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    marginHorizontal: 5,
+},
+  userBtnTxt: {
+  color: '#2e64e5',
+},
 });
 
 export default Profilea;

@@ -1,6 +1,6 @@
 {
     "identityPoolName": "loopsocial29b2f9f6_identitypool_29b2f9f6",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "loopso29b2f9f6",
     "userPoolName": "loopsocial29b2f9f6_userpool_29b2f9f6",
     "autoVerifiedAttributes": [

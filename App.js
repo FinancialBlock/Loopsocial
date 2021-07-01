@@ -1,6 +1,7 @@
 import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
 import React, {useEffect} from 'react';
+import Amplify, {Storage} from 'aws-amplify';
 import type {Node} from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {
@@ -28,7 +29,9 @@ import {withAuthenticator} from 'aws-amplify-react-native';
 
 import {createUser} from './src/graphql/mutations';
 import {getUser} from './src/graphql/queries';
+import awsconfig from './aws-exports';
 
+Amplify.configure(awsconfig);
 
 const randomImages = [
   'https://hieumobile.com/wp-content/uploads/avatar-among-us-2.jpg',

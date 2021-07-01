@@ -28,7 +28,7 @@ const Camera = () => {
         onRecordingStart={() => setIsRecording(true)}
         onRecordingEnd={() => setIsRecording(false)}
         style={styles.preview}
-        captureAudio={false}
+        //captureAudio={false}
       />
       <TouchableOpacity
         onPress={onRecord}

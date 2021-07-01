@@ -11,15 +11,14 @@ import {
   FlatList,
   TextInput,
   Dimensions,
+  ScrollView,
   StatusBar,
   SafeAreaView,
 } from 'react-native';
-import TopBar from './TopBar';
-import Home from '../Home';
 
 const FirstRoute = () => (
   <View>
-    <Text> Hey </Text>
+    <Text> Heyhhssjjskdkdjdskdkdnmdsksjdn </Text>
   </View>
 );
 
