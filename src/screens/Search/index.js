@@ -31,7 +31,7 @@ const SearchBar = () => {
               horizontal={true}
               showsHorizontalScrollIndicator={false}>
               <View style={{alignSelf: 'center'}}>
-                <View style={styles.profileImagestorys}>
+                <View style={styles.storyview}>
                   <ImageBackground
                     style={styles.profileImagestorys}
                     source={{
@@ -41,7 +41,7 @@ const SearchBar = () => {
                 </View>
               </View>
               <View style={{alignSelf: 'center'}}>
-                <View style={styles.profileImagestorys}>
+                <View style={styles.storyview}>
                   <ImageBackground
                     style={styles.profileImagestorys}
                     source={{
@@ -51,7 +51,7 @@ const SearchBar = () => {
                 </View>
               </View>
               <View style={{alignSelf: 'center'}}>
-                <View style={styles.profileImagestorys}>
+                <View style={styles.storyview}>
                   <ImageBackground
                     style={styles.profileImagestorys}
                     source={{
@@ -61,7 +61,7 @@ const SearchBar = () => {
                 </View>
               </View>
               <View style={{alignSelf: 'center'}}>
-                <View style={styles.profileImagestorys}>
+                <View style={styles.storyview}>
                   <ImageBackground
                     style={styles.profileImagestorys}
                     source={{
@@ -71,7 +71,7 @@ const SearchBar = () => {
                 </View>
               </View>
               <View style={{alignSelf: 'center'}}>
-                <View style={styles.profileImagestorys}>
+                <View style={styles.storyview}>
                   <ImageBackground
                     style={styles.profileImagestorys}
                     source={{
@@ -81,7 +81,7 @@ const SearchBar = () => {
                 </View>
               </View>
               <View style={{alignSelf: 'center'}}>
-                <View style={styles.profileImagestorys}>
+                <View style={styles.storyview}>
                   <ImageBackground
                     style={styles.profileImagestorys}
                     source={{
@@ -91,7 +91,7 @@ const SearchBar = () => {
                 </View>
               </View>
               <View style={{alignSelf: 'center'}}>
-                <View style={styles.profileImagestorys}>
+                <View style={styles.storyview}>
                   <ImageBackground
                     style={styles.profileImagestorys}
                     source={{
@@ -377,13 +377,13 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   profileImagestorys: {
-    width: 80,
-    height: 80,
+    width: 70,
+    height: 70,
     marginLeft: 0,
-    borderRadius: 100,
+    borderRadius: 10,
     overflow: 'hidden',
     borderWidth: 1,
-    borderColor: 'green',
+    borderColor: 'blue',
   },
   dm: {
     backgroundColor: '#41444B',
@@ -394,6 +394,9 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  storyview: {
+    marginLeft: 4,
   },
   active: {
     backgroundColor: '#34FFB9',
