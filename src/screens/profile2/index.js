@@ -50,17 +50,21 @@ const Profilea = () => {
             />
           </View>
           <View style={styles.dm}>
-            <MaterialIcons name="chat" size={18} color="#DFD8C8" />
+            <TouchableOpacity>
+              <MaterialIcons name="chat" size={18} color="#DFD8C8" />
+            </TouchableOpacity>
           </View>
           <View style={styles.active} />
-          <View style={styles.add}>
-            <AntDesign
-              name="pluscircle"
-              size={48}
-              color="#185ADB"
-              style={{marginTop: 6, marginLeft: 2}}
-            />
-          </View>
+          <TouchableOpacity>
+            <View style={styles.add}>
+              <AntDesign
+                name="pluscircle"
+                size={48}
+                color="#185ADB"
+                style={{marginTop: 6, marginLeft: 2}}
+              />
+            </View>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.infoContainer}>
@@ -107,16 +111,12 @@ const Profilea = () => {
                 style={styles.iconloop}
                 name={'infinity'}
               />
-
-
-
             </View>
           </View>
         </View>
-        <Feed/>
+        <Feed />
       </ScrollView>
     </SafeAreaView>
-
   );
 };
 
@@ -247,7 +247,7 @@ const styles = StyleSheet.create({
     width: '100%',
     marginBottom: 2,
     marginTop: 10,
-},
+  },
   userBtn: {
     borderColor: '#2e64e5',
     borderWidth: 2,
@@ -255,10 +255,10 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 12,
     marginHorizontal: 5,
-},
+  },
   userBtnTxt: {
-  color: '#2e64e5',
-},
+    color: '#2e64e5',
+  },
 });
 
 export default Profilea;

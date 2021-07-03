@@ -61,9 +61,9 @@ const styles = StyleSheet.create({
     borderColor: '#4c4c4c',
   },
   profilepicontainer: {
-    width: 50,
+    width: 65,
     height: 50,
-    borderRadius: 25,
+    borderRadius: 30,
     borderWidth: 2,
     borderColor: '#fff',
   },
@@ -93,6 +93,9 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     borderWidth: 2,
     borderColor: '#fff',
+  },
+  profileAlign: {
+    alignItems: 'flex-start',
   },
 });
 

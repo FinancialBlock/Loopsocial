@@ -7,20 +7,25 @@ import {
   TouchableOpacity,
   SafeAreaView,
   ScrollView,
-  ImageBackground,
-} from 'react-native';
+  ImageBackground, Image,
+} from "react-native";
 import EvilIcons from 'react-native-vector-icons/Entypo';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { emitNotificationDecl } from "react-native/ReactCommon/hermes/inspector/tools/msggen/src/HeaderWriter";
 
 const SearchBar = () => {
   return (
-    <ScrollView>
+    <ScrollView horizontal={false} showsHorizontalScrollIndicator={false}>
       <View>
         <View style={styles.container}>
           <FontAwesome style={styles.searchIcon} name={'search'} size={30} />
           <TextInput style={styles.text} placeholder="Search here.." />
         </View>
         <View style={{backgroundColor: '#FFFFFF'}}>
+          <View style={styles.storieswatchalign}>
+          <Text style={styles.storiesalign}>Stories</Text>
+          <Text style={styles.watchalign}> Watch all</Text>
+          </View>
           <View style={{marginTop: 5}}>
             <ScrollView
               horizontal={true}
@@ -30,7 +35,7 @@ const SearchBar = () => {
                   <ImageBackground
                     style={styles.profileImagestorys}
                     source={{
-                      uri: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTApJdGN6I8NjFvhKfOBIwjz759q53b8HBckMLXl_blfq5RXZFy',
+                      uri: 'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTgwNzYwMzU2OTI1MjIwMjAw/gettyimages-144485756.jpg',
                     }}
                   />
                 </View>
@@ -50,7 +55,7 @@ const SearchBar = () => {
                   <ImageBackground
                     style={styles.profileImagestorys}
                     source={{
-                      uri: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTApJdGN6I8NjFvhKfOBIwjz759q53b8HBckMLXl_blfq5RXZFy',
+                      uri: 'https://static.wikia.nocookie.net/taylor-swift/images/f/f8/966B835D-05BE-41A0-88E6-2F201B8E2A88.jpeg/revision/latest?cb=20200913182411',
                     }}
                   />
                 </View>
@@ -60,7 +65,7 @@ const SearchBar = () => {
                   <ImageBackground
                     style={styles.profileImagestorys}
                     source={{
-                      uri: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTApJdGN6I8NjFvhKfOBIwjz759q53b8HBckMLXl_blfq5RXZFy',
+                      uri: 'https://www.rollingstone.com/wp-content/uploads/2021/05/J.-Cole_Lead-Promo-Image.jpg?resize=1800,1200&w=1200',
                     }}
                   />
                 </View>
@@ -70,7 +75,7 @@ const SearchBar = () => {
                   <ImageBackground
                     style={styles.profileImagestorys}
                     source={{
-                      uri: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTApJdGN6I8NjFvhKfOBIwjz759q53b8HBckMLXl_blfq5RXZFy',
+                      uri: 'https://static.highsnobiety.com/thumbor/pD4imSosu5Y0wOYZo8p5zBoc6h0=/1600x960/static.highsnobiety.com/wp-content/uploads/2021/05/04153050/jay-z-feat.jpg',
                     }}
                   />
                 </View>
@@ -80,7 +85,7 @@ const SearchBar = () => {
                   <ImageBackground
                     style={styles.profileImagestorys}
                     source={{
-                      uri: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTApJdGN6I8NjFvhKfOBIwjz759q53b8HBckMLXl_blfq5RXZFy',
+                      uri: 'https://ftw.usatoday.com/wp-content/uploads/sites/90/2020/10/GTY-1278509654.jpg?w=1000&h=600&crop=1',
                     }}
                   />
                 </View>
@@ -90,7 +95,7 @@ const SearchBar = () => {
                   <ImageBackground
                     style={styles.profileImagestorys}
                     source={{
-                      uri: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTApJdGN6I8NjFvhKfOBIwjz759q53b8HBckMLXl_blfq5RXZFy',
+                      uri: 'https://i.pinimg.com/280x280_RS/ef/b7/f6/efb7f67bd9dbb9aa28ba41b2931ef559.jpg',
                     }}
                   />
                 </View>
@@ -99,21 +104,226 @@ const SearchBar = () => {
           </View>
         </View>
 
+
+
         <View>
-          <Text style={styles.discovertitle}> Discover </Text>
+          <Text style={styles.discovertitlefirst}> Discover </Text>
         </View>
+
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media1.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media2.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media3.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+            <Image
+              source={require('./assets/media1.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media2.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media3.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+        </ScrollView>
+
         <View>
           <Text style={styles.discovertitle}> Challenges </Text>
         </View>
+
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media1.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media2.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media3.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+            <Image
+              source={require('./assets/media1.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media2.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media3.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+        </ScrollView>
+
+
         <View>
           <Text style={styles.discovertitle}> Trending </Text>
         </View>
+
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media1.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media2.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media3.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+            <Image
+              source={require('./assets/media1.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media2.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media3.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+        </ScrollView>
+
+
         <View>
           <Text style={styles.discovertitle}> Subscriptions </Text>
         </View>
+
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media1.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media2.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media3.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+            <Image
+              source={require('./assets/media1.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media2.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media3.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+        </ScrollView>
+
         <View>
           <Text style={styles.discovertitle}> Favorites </Text>
         </View>
+
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media1.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media2.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.mediaImageContainer}>
+            <Image
+              source={require('./assets/media3.jpg')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+        </ScrollView>
+
       </View>
     </ScrollView>
   );
@@ -264,10 +474,41 @@ const styles = StyleSheet.create({
   iconloop: {
     flexDirection: 'row',
   },
+  discovertitlefirst: {
+    fontSize: 30,
+    marginTop: 10,
+    fontWeight: 'bold',
+  },
   discovertitle: {
     fontSize: 30,
-    marginTop: 100,
+    marginTop: 15,
     fontWeight: 'bold',
+  },
+  watchalign: {
+    fontSize: 15,
+    color: 'blue',
+    marginTop: 5,
+    textAlign: 'right',
+    marginRight: 5,
+  },
+  storiesalign: {
+    color: 'blue',
+    fontSize: 15,
+    marginTop: 5,
+    flexDirection: 'row',
+    marginLeft: 5,
+  },
+  storieswatchalign: {
+    alignContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  mediaImageContainer: {
+    width: 180,
+    height: 200,
+    borderRadius: 12,
+    overflow: 'hidden',
+    marginHorizontal: 10,
   },
 });
 

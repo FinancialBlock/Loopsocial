@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+
 import Video from 'react-native-video';
 import styles from './styles';
 import AntDesign from "react-native-vector-icons/AntDesign";
@@ -36,6 +37,7 @@ const Post = (props) => {
   };
 
   return (
+
     <View style={styles.container}>
       <TouchableWithoutFeedback onPress={onPlayPausePress}>
         <View>
@@ -51,14 +53,16 @@ const Post = (props) => {
           />
 
           <View style={styles.uiContainer}>
-            <View style={styles.rightcontainer}>
-              <Image
-                style={styles.profilepicontainer}
-                source={{
-                  uri: 'https://cdn.vox-cdn.com/thumbor/SEyPwlAyVZy62pmarwy1h89yLt8=/0x4:600x404/1200x800/filters:focal(0x4:600x404)/cdn.vox-cdn.com/photo_images/1347393/23-Oct-10_103931147CP031_Golden_State.jpg',
-                }}
-              />
 
+            <View style={styles.profileAlign}>
+            <Image
+              style={styles.profilepicontainer}
+              source={{
+                uri: 'https://cdn.vox-cdn.com/thumbor/SEyPwlAyVZy62pmarwy1h89yLt8=/0x4:600x404/1200x800/filters:focal(0x4:600x404)/cdn.vox-cdn.com/photo_images/1347393/23-Oct-10_103931147CP031_Golden_State.jpg',
+              }}
+            />
+            </View>
+            <View style={styles.rightcontainer}>
               <TouchableOpacity style={styles.iconContainer} onPress={onLikePress}>
                 <AntDesign name={'heart'} size={40} color={isLiked ? 'red' : 'white'} />
                 <Text style={styles.statsContainer}>{post.likes}</Text>
