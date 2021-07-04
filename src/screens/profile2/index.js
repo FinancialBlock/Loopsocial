@@ -31,7 +31,10 @@ import {listPosts} from '../../graphql/queries';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {red} from 'react-native-reanimated/src/reanimated2/Colors';
 
-const Profilea = () => {
+
+
+const Profilea = (props) => {
+  const [post, setPost] = useState(props.post);
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>

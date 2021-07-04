@@ -27,6 +27,13 @@ const styles = StyleSheet.create({
         borderRadius: 3,
         backgroundColor: '#ff4343',
     },
+    rightcontainer: {
+        alignSelf: 'flex-end',
+        height: 60,
+        justifyContent: 'space-between',
+        marginRight: 10,
+        marginTop: 2,
+    },
 });
 
 export default styles;

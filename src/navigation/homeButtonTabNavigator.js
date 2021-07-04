@@ -11,6 +11,8 @@ import TabViewExample from '../screens/Inbox';
 import Camera from "../screens/Camera";
 import {Image} from 'react-native';
 import circleicon from '../assets/images/circle-cropped.png';
+import Topbar from "../components/Top Bar";
+
 
 
 
@@ -70,6 +72,15 @@ const HomeButtonTabNavigator = () => {
           ),
         }}
       />
+{/*      <Tab.Screen
+        name={'Searchs'}
+        component={Search}
+        options={{
+          tabBarIcon: ({color}) => (
+            <EvilIcons name={'search'} size={40} color={color} />
+          ),
+        }}
+      />*/}
     </Tab.Navigator>
   );
 };

@@ -10,6 +10,7 @@ import {
   Image,
 } from 'react-native';
 import {TabView, SceneMap} from 'react-native-tab-view';
+import Profilecard from "../Profilecard";
 import {
   Text,
   FlatList,
@@ -95,6 +96,7 @@ const FirstRoute = () => (
 const SecondRoute = () => (
   <View>
     <View style={{flex: 1, backgroundColor: '#673ab7'}} />
+    <Profilecard/>
   </View>
 );
 

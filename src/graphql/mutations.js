@@ -226,3 +226,105 @@ export const deleteSong = /* GraphQL */ `
     }
   }
 `;
+export const createStory = /* GraphQL */ `
+  mutation CreateStory(
+    $input: CreateStoryInput!
+    $condition: ModelStoryConditionInput
+  ) {
+    createStory(input: $input, condition: $condition) {
+      id
+      videoUri
+      description
+      userID
+      user {
+        id
+        username
+        email
+        imageUri
+        posts {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      songID
+      song {
+        id
+        name
+        imageUri
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateStory = /* GraphQL */ `
+  mutation UpdateStory(
+    $input: UpdateStoryInput!
+    $condition: ModelStoryConditionInput
+  ) {
+    updateStory(input: $input, condition: $condition) {
+      id
+      videoUri
+      description
+      userID
+      user {
+        id
+        username
+        email
+        imageUri
+        posts {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      songID
+      song {
+        id
+        name
+        imageUri
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteStory = /* GraphQL */ `
+  mutation DeleteStory(
+    $input: DeleteStoryInput!
+    $condition: ModelStoryConditionInput
+  ) {
+    deleteStory(input: $input, condition: $condition) {
+      id
+      videoUri
+      description
+      userID
+      user {
+        id
+        username
+        email
+        imageUri
+        posts {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      songID
+      song {
+        id
+        name
+        imageUri
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;

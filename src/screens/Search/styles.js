@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     height: '50',
-    backgroundColor: 'white',
+    backgroundColor: 'black',
     borderRadius: 8,
   },
   searchInput: {
@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
     height: '100%',
     paddingLeft: 8,
     fontSize: 16,
+    backgroundColor: '#FFFFFF',
   },
   profileleft: {
     width: 50,

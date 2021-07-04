@@ -2,6 +2,7 @@ import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
 import React, {useEffect} from 'react';
 import Amplify, {Storage} from 'aws-amplify';
+
 import type {Node} from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {

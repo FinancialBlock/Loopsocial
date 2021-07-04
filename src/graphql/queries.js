@@ -142,3 +142,69 @@ export const listSongs = /* GraphQL */ `
     }
   }
 `;
+export const getStory = /* GraphQL */ `
+  query GetStory($id: ID!) {
+    getStory(id: $id) {
+      id
+      videoUri
+      description
+      userID
+      user {
+        id
+        username
+        email
+        imageUri
+        posts {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      songID
+      song {
+        id
+        name
+        imageUri
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listStorys = /* GraphQL */ `
+  query ListStorys(
+    $filter: ModelStoryFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listStorys(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        videoUri
+        description
+        userID
+        user {
+          id
+          username
+          email
+          imageUri
+          createdAt
+          updatedAt
+        }
+        songID
+        song {
+          id
+          name
+          imageUri
+          createdAt
+          updatedAt
+        }
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;

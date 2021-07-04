@@ -199,3 +199,96 @@ export const onDeleteSong = /* GraphQL */ `
     }
   }
 `;
+export const onCreateStory = /* GraphQL */ `
+  subscription OnCreateStory {
+    onCreateStory {
+      id
+      videoUri
+      description
+      userID
+      user {
+        id
+        username
+        email
+        imageUri
+        posts {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      songID
+      song {
+        id
+        name
+        imageUri
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateStory = /* GraphQL */ `
+  subscription OnUpdateStory {
+    onUpdateStory {
+      id
+      videoUri
+      description
+      userID
+      user {
+        id
+        username
+        email
+        imageUri
+        posts {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      songID
+      song {
+        id
+        name
+        imageUri
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteStory = /* GraphQL */ `
+  subscription OnDeleteStory {
+    onDeleteStory {
+      id
+      videoUri
+      description
+      userID
+      user {
+        id
+        username
+        email
+        imageUri
+        posts {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      songID
+      song {
+        id
+        name
+        imageUri
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;

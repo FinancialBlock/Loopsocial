@@ -16,7 +16,7 @@ import { emitNotificationDecl } from "react-native/ReactCommon/hermes/inspector/
 const SearchBar = () => {
   return (
     <ScrollView horizontal={false} showsHorizontalScrollIndicator={false}>
-      <View>
+      <View style={{ backgroundColor: '#FFFFFF'}}>
         <View style={styles.container}>
           <FontAwesome style={styles.searchIcon} name={'search'} size={30} />
           <TextInput style={styles.text} placeholder="Search here.." />
