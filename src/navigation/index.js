@@ -5,6 +5,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Home from '../screens/Home';
 import CreatePost from '../screens/CreatePost';
 import HomeButtonTabNavigator from './homeButtonTabNavigator';
+import LoopStoryScreen from '../screens/LoopStoryScreen';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,14 @@ const RootNavigation = () => {
           }}
           name="CreatePost"
           component={CreatePost}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+            title: 'Loop Stories',
+          }}
+          name="Story"
+          component={LoopStoryScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

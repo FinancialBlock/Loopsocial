@@ -8,13 +8,12 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Profilea from '../screens/profile2';
 import Search from '../screens/Search';
 import TabViewExample from '../screens/Inbox';
-import Camera from "../screens/Camera";
+import Camera from '../screens/Camera';
 import {Image} from 'react-native';
 import circleicon from '../assets/images/circle-cropped.png';
 import Topbar from "../components/Top Bar";
-
-
-
+import UserLoopStory from "../components/UserLoopStory";
+import Storyparent from '../screens/Storyparent';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,6 +23,7 @@ const HomeButtonTabNavigator = () => {
       tabBarOptions={{
         tabStyle: {
           backgroundColor: '#000',
+          justifyContent: 'flex-end',
         },
         activeTintColor: '#fff',
       }}>
@@ -33,6 +33,7 @@ const HomeButtonTabNavigator = () => {
         options={{
           tabBarIcon: ({color}) => (
             <Entypo name={'home'} size={24} color={color} />
+
           ),
         }}
       />
@@ -45,6 +46,7 @@ const HomeButtonTabNavigator = () => {
           ),
         }}
       />
+
         <Tab.Screen
             name={'Camera'}
             component={Camera}

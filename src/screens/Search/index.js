@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import EvilIcons from 'react-native-vector-icons/Entypo';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import { emitNotificationDecl } from "react-native/ReactCommon/hermes/inspector/tools/msggen/src/HeaderWriter";
+import Storyparent from "../Storyparent";
 
 const SearchBar = () => {
   return (
@@ -27,7 +27,8 @@ const SearchBar = () => {
           <Text style={styles.watchalign}> Watch all</Text>
           </View>
           <View style={{marginTop: 5}}>
-            <ScrollView
+            <Storyparent />
+            {/*<ScrollView
               horizontal={true}
               showsHorizontalScrollIndicator={false}>
               <View style={{alignSelf: 'center'}}>
@@ -98,9 +99,9 @@ const SearchBar = () => {
                       uri: 'https://i.pinimg.com/280x280_RS/ef/b7/f6/efb7f67bd9dbb9aa28ba41b2931ef559.jpg',
                     }}
                   />
-                </View>
-              </View>
-            </ScrollView>
+                </View>*/}
+             {/* </View>*/}
+           {/* </ScrollView>*/}
           </View>
         </View>
 

@@ -1,23 +1,22 @@
 import React from 'react';
-import { Button, Header } from 'react-native-elements';
+import { Button, Header, Avatar } from 'react-native-elements';
 import { View } from "react-native";
 
 
 // Your App
 const Topbar = () => {
   return (
-  <View>
-  <Header
+    <View>
+      <Header
         leftComponent={{icon: 'menu', color: '#fff', iconStyle: {color: '#fff'}}}
         centerComponent={{text: 'Loops', style: {color: '#fff'}}}
         rightComponent={{icon: 'home', color: '#fff'}}
-
         containerStyle={{
-        backgroundColor: 'black',
+          backgroundColor: 'black',
           justifyContent: 'space-around',
-      }}></Header>
+        }}></Header>
 
-  </View>
+    </View>
   )
 };
 

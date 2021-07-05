@@ -14,7 +14,6 @@ import {
   ImageBackground,
 } from 'react-native';
 import Post from '../../components/Post';
-import {API, graphqlOperation} from 'aws-amplify';
 import {createUser} from '../../graphql/mutations';
 import {FAB} from 'react-native-elements';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -24,17 +23,25 @@ import Feed from '../.././components/Feed';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import Home from '../Home';
-
+import { API, graphqlOperation } from 'aws-amplify';
 import posts from '../../../data/posts';
 import {listPosts} from '../../graphql/queries';
+import {listUsers} from '../../graphql/queries';
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {red} from 'react-native-reanimated/src/reanimated2/Colors';
+import { UserAgent } from "amazon-cognito-identity-js";
 
 
 
-const Profilea = (props) => {
-  const [post, setPost] = useState(props.post);
+
+
+
+
+const Profile = (props) => {
+
+
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -264,4 +271,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Profilea;
+export default Profile;

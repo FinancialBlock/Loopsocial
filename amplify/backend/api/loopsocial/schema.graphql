@@ -11,6 +11,7 @@ type Post @model @key(name: "byUser", fields: ["userID"]) {
   videoUri: String!
   description: String!
 
+
   userID: ID!
   user: User @connection(fields: ["userID"])
 
@@ -26,15 +27,16 @@ type Song @model {
 
 type Story @model @key(name: "byUser", fields: ["userID"]) {
   id: ID!
-  videoUri: String!
+  videoUri: String
   description: String!
 
   userID: ID!
   user: User @connection(fields: ["userID"])
 
-  songID: ID!
+  songID: ID
   song: Song @connection(fields: ["songID"])
 
   }
+
 
 
